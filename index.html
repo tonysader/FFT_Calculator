@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FFT Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Online FFT Calculator</h1>
+  <p>FFT: A fast Fourier transform (FFT) is an algorithm that computes the discrete Fourier transform (DFT) of a sequence, or its inverse (IDFT). Fourier analysis converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa.
+
+  </p>
+</div>
+
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label> Please enter the values (Integers) seperated by comma </label>
+          <input type="text" placeholder="example: -1,2,3,0" class="form-control" id="values_input" >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <center>
+          <button type="button" value="solve" id="solve_btn" class="form-control btn btn-success text-white" name="button">Solve</button>
+        </center>
+      </div>
+    </div>
+  </form>
+  <div class="box">
+    <div class="box-header">
+      <h4> Or try these values: </h4>
+    </div>
+    <div class="box-body">
+
+      <div class="row">
+        <div style="padding: 10px; border-radius: 20px; cursor:pointer" id="try1_val" class="try col-12 col-md-6 bg-primary text-white text-center">
+-1,2,3,0
+        </div>
+
+
+      </div>
+      <div class="row mt-5">
+        <div style="padding: 10px; border-radius: 20px; cursor:pointer"  id="try2_val" class="try col-12 col-md-6 bg-primary text-white text-center">
+2,1,-1,5,0,3,0,-4
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row mt-5 bg-success text-white " style="padding: 20px"  id="result_div">
+    <center>
+      <div class="col-12">
+        The result is: <span id="final_result"> </span>
+      </div>
+    </center>
+  </div>
+  <div class="result_table table table-responsive ">
+
+  </div>
+</div>
+
+</body>
+</html>
